@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* sticky ヘッダー分のオフセット */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-kinari text-sumi font-sans antialiased;
+    /* 微細な和紙風テクスチャ（極めて控えめ） */
+    background-image:
+      radial-gradient(rgba(44, 44, 44, 0.025) 1px, transparent 1px),
+      radial-gradient(rgba(44, 44, 44, 0.02) 1px, transparent 1px);
+    background-size: 24px 24px, 32px 32px;
+    background-position: 0 0, 12px 16px;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+
+  /* キーボード操作時のフォーカスリング統一 */
+  :focus-visible {
+    outline: 2px solid #1F3A5F;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* セクションアンカー先のスクロール余白 */
+  [id] {
+    scroll-margin-top: 5rem;
+  }
+
+  /* 動きを抑える設定への配慮 */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply max-w-6xl mx-auto px-5 sm:px-8;
+  }
+
+  .section-divider {
+    @apply h-px w-12 bg-sumi/20 my-6;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium leading-none whitespace-nowrap;
+  }
+
+  /* 縦書きの装飾ラベル（モバイルでは横書きに退避） */
+  .vertical-label {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    letter-spacing: 0.4em;
+  }
+}
+
+@layer utilities {
+  /* 抹茶色のごく薄い装飾線（区切り用） */
+  .border-matcha-soft {
+    border-color: rgba(122, 139, 92, 0.3);
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm view *)",
+      "Bash(npm audit *)",
+      "Bash(npx next *)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code} | %{size_download} bytes\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"GET / -> HTTP %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -i http://localhost:3000/students)",
+      "Bash(curl -s -i -u student:wrong http://localhost:3000/students)",
+      "Bash(curl -s -o /dev/null -w \"GET /students \\(auth\\) -> HTTP %{http_code}\\\\n\" -u student:test1234 http://localhost:3000/students)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill *)",
+      "Bash(curl -s -o /dev/null -w \"GET /students -> HTTP %{http_code}\\\\n\" http://localhost:3000/students)",
+      "Bash(curl -s -o /dev/null -w \"GET /students wrong -> HTTP %{http_code}\\\\n\" -u student:wrong http://localhost:3000/students)",
+      "Bash(curl -s -o /dev/null -w \"GET /students ok -> HTTP %{http_code}\\\\n\" -u student:test1234 http://localhost:3000/students)",
+      "Bash(curl -s -u student:test1234 http://localhost:3000/students)",
+      "Bash(curl -s -o /dev/null -w \"GET / -> %{http_code}\\\\nGET /students \\(auth\\) -> %{http_code}\\\\n\" http://localhost:3000/ -u student:test1234)",
+      "Bash(curl -s -o /dev/null -w \"GET /students -> %{http_code}\\\\n\" -u student:test1234 http://localhost:3000/students)",
+      "Bash(curl -s -o /dev/null -w \"GET / -> %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"GET /manifest.webmanifest -> %{http_code} %{content_type} %{size_download}B\\\\n\" http://localhost:3000/manifest.webmanifest)",
+      "Bash(curl -s -o /dev/null -w \"GET /icons/icon.svg -> %{http_code} %{content_type} %{size_download}B\\\\n\" http://localhost:3000/icons/icon.svg)",
+      "Bash(curl -s -o /dev/null -w \"GET /icons/icon-maskable.svg -> %{http_code} %{content_type} %{size_download}B\\\\n\" http://localhost:3000/icons/icon-maskable.svg)",
+      "Bash(curl -s -o /dev/null -w \"GET /apple-icon -> %{http_code} %{content_type} %{size_download}B\\\\n\" http://localhost:3000/apple-icon)",
+      "Bash(curl -s -o /dev/null -w \"GET /sw.js -> %{http_code} %{content_type} %{size_download}B\\\\n\" http://localhost:3000/sw.js)",
+      "Bash(curl -s http://localhost:3000/manifest.webmanifest)",
+      "Bash(curl -s -o /dev/null -w \"GET /students -u student:test1234 -> %{http_code}\\\\n\" -u student:test1234 http://localhost:3000/students)",
+      "Bash(curl -s -o /dev/null -w \"GET /students no auth -> %{http_code}\\\\n\" http://localhost:3000/students)"
+    ]
+  }
+}

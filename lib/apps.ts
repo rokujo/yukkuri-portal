@@ -2,11 +2,14 @@ import appsData from "@/data/apps.json";
 
 export type Subject =
   | "english"
-  | "kobun"
+  | "japanese"
   | "math"
   | "chemistry"
   | "biology"
-  | "physics";
+  | "physics"
+  | "information"
+  | "history"
+  | "civics";
 
 export type AppStatus =
   | "production"
@@ -65,11 +68,14 @@ export type AppsJson = {
 
 export const SUBJECT_NAMES: Record<Subject, string> = {
   english: "英語",
-  kobun: "古文",
+  japanese: "国語",
   math: "数学",
   chemistry: "化学",
   biology: "生物",
   physics: "物理",
+  information: "情報",
+  history: "地理・歴史",
+  civics: "公民",
 };
 
 const data = appsData as AppsJson;

@@ -33,8 +33,8 @@
       "lastUpdated": "2026-05-04"
     },
     {
-      "id": "english-vocablens",
-      "name": "VocabLens(文脈型単語)",
+      "id": "english-wordflow",
+      "name": "WordFlow(文脈型単語)",
       "subject": "english",
       "category": "vocabulary",
       "description": "「ゆっくり英単語2000」を読解問題で定着させよう。問題は毎回AIが生成！Ankiと同様の間隔学習も搭載。塾長の趣味で多言語対応。",

@@ -15,26 +15,41 @@
       "passwordRotationMonths": 6
     }
   },
-  "subjectOrder": ["english", "kobun", "math", "chemistry"],
+  "subjectOrder": ["english", "kobun", "math", "chemistry","infomation"],
   "apps": [
     {
-      "id": "english-grammar",
-      "name": "英文法問題集",
+      "id": "english-vocab",
+      "name": "ゆっくり英単語2000",
       "subject": "english",
       "category": "grammar",
-      "description": "1000問以上からランダム出題。直近の出題は重複回避。",
-      "url": "",
+      "description": "(Ankiアプリ）大学受験用単語集2000語",
+      "url": "https://anki-seven-black.vercel.app/",
+      "status": "production",
+      "access": "free",
+      "icon": "🔤",
+      "tags": ["英語", "単語", "Anki"],
+      "targetLevel": ["高1", "高2", "高3"],
+      "techStack": ["Anki"],
+      "lastUpdated": "2026-05-04"
+    },
+    {
+      "id": "english-grammar",
+      "name": "英文法・語法問題集",
+      "subject": "english",
+      "category": "grammar",
+      "description": "(Ankiアプリ）英文法・語法の問題が1000問以上",
+      "url": "https://anki-seven-black.vercel.app/",
       "status": "production",
       "access": "free",
       "icon": "📝",
-      "tags": ["英語", "文法", "ランダム出題"],
+      "tags": ["英語", "文法", "Anki"],
       "targetLevel": ["高1", "高2", "高3"],
-      "techStack": ["静的HTML"],
-      "lastUpdated": "2026-04-30"
+      "techStack": ["Anki"],
+      "lastUpdated": "2026-05-04"
     },
     {
       "id": "english-writing",
-      "name": "英作文添削",
+      "name": "英作文添削・暗記",
       "subject": "english",
       "category": "writing",
       "description": "AIが英作文を添削。和文英訳と自由英作文に対応。",
@@ -165,6 +180,21 @@
       "tags": ["化学", "暗記"],
       "targetLevel": ["高2", "高3"],
       "techStack": ["未定"],
+      "lastUpdated": "2026-04-30"
+    }
+    {
+      "id": "infomation-words",
+      "name": "情報Ⅰ用語集",
+      "subject": "infomation",
+      "category": "memorize",
+      "description": "(Ankiアプリ)情報Ⅰの用語集。,
+      "url": "https://anki-seven-black.vercel.app/",
+      "status": "production",
+      "access": "kampa",
+      "icon": "📟",
+      "tags": ["情報Ⅰ", "暗記"],
+      "targetLevel": ["高2", "高3"],
+      "techStack": ["Anki"],
       "lastUpdated": "2026-04-30"
     }
   ]

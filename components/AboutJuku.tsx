@@ -23,7 +23,7 @@ export default function AboutJuku() {
             {site.name}について
           </h2>
           <p className="text-sm sm:text-base leading-relaxed text-kinari/90 mb-4">
-            長野県内の高校生（長野高校志望が中心）を対象とした、個別指導・少人数制の塾です。
+            長野県内の小中高生を対象とした、個別指導・少人数制の塾です。
           </p>
           <p className="text-sm sm:text-base leading-relaxed text-kinari/90 mb-8">
             「ゆっくり」は、急がせない・理解を飛ばさない・生徒のペースを大切にすることを意味します。

@@ -103,7 +103,7 @@
       "access": "kampa",
       "icon": "📒",
       "tags": ["英語", "ライティング", "Anki"],
-      "targetLevel": ["高1", "高2", "高3"],
+      "targetLevel": ["中学","高校"],
       "techStack": ["Anki"],
       "lastUpdated": "2026-04-30"
     },

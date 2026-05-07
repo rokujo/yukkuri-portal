@@ -5,7 +5,7 @@
     "name": "上松ゆっくり塾",
     "tagline": "上松ゆっくり塾の、ありそうでなかった学習アプリ",
     "description": "現場の指導から生まれた学習アプリ群。AIを使いながら、生徒のペースに寄り添います。",
-    "blogUrl": "https://ameblo.jp/yukkuri-jyuku/entry-12951539399.html",
+    "blogUrl": "https://ameblo.jp/yukkuri-jyuku/",
     "kampaInfo": {
       "halfYear": 2000,
       "year": 3500,
@@ -307,45 +307,45 @@
       "name": "公共用語集",
       "subject": "civics",
       "category": "memorize",
-      "description": "(Ankiで搭載予定)公共の用語集。記憶用。",
-      "url": "",
-      "status": "planned",
+      "description": "(Ankiアプリ)公共の用語集。共テ対策に。政経/倫理の前段階の超基本単語集。
+      "url": "https://anki-seven-black.vercel.app/",
+      "status": "production",
       "access": "kampa",
       "icon": "🤝",
       "tags": ["公共", "暗記"],
       "targetLevel": ["高1", "高2", "高3"],
       "techStack": ["Anki"],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-05-08"
     },
     {
       "id": "civics-politics-economy",
       "name": "政経用語集",
       "subject": "civics",
       "category": "memorize",
-      "description": "(Ankiで搭載予定)政治・経済の用語集。記憶用。",
-      "url": "",
-      "status": "planned",
+      "description": "(Ankiアプリ)政治・経済の用語集。共テ対策に。公共と重複しないようにしてある。公共と足して1400語。",
+      "url": "https://anki-seven-black.vercel.app/",
+      "status": "production",
       "access": "kampa",
       "icon": "💹",
       "tags": ["政治・経済", "暗記"],
       "targetLevel": ["高1", "高2", "高3"],
       "techStack": ["Anki"],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-05-08"
     },
     {
       "id": "civics-ethics",
       "name": "倫理用語集",
       "subject": "civics",
       "category": "memorize",
-      "description": "(Ankiで搭載予定)倫理の用語集。記憶用。",
-      "url": "",
-      "status": "planned",
+      "description": "(Ankiアプリ)倫理の用語集。共テ対策に。現代文対策にもなる。公共と足して1600語。",
+      "url": "https://anki-seven-black.vercel.app/",
+      "status": "production",
       "access": "kampa",
       "icon": "⚖️",
       "tags": ["倫理", "暗記"],
       "targetLevel": ["高1", "高2", "高3"],
       "techStack": ["Anki"],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-05-08"
     },
     {
       "id": "information-words",

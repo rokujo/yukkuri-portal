@@ -28,7 +28,7 @@
       "access": "free",
       "icon": "🔤",
       "tags": ["英語", "単語", "Anki"],
-      "targetLevel": ["高1", "高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Anki"],
       "lastUpdated": "2026-05-04"
     },
@@ -43,7 +43,7 @@
       "access": "kampa",
       "icon": "🧠",
       "tags": ["英語", "単語", "AI", "Anki"],
-      "targetLevel": ["高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Next.js", "Gemini API"],
       "lastUpdated": "2026-04-30"
     },
@@ -58,7 +58,7 @@
       "access": "kampa",
       "icon": "📖",
       "tags": ["英語", "リーディング", "AI"],
-      "targetLevel": ["高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Next.js", "Gemini API"],
       "lastUpdated": "2026-04-30"
     },
@@ -73,7 +73,7 @@
       "access": "kampa",
       "icon": "📝",
       "tags": ["英語", "文法", "Anki"],
-      "targetLevel": ["高1", "高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Anki"],
       "lastUpdated": "2026-05-04"
     },
@@ -88,7 +88,7 @@
       "access": "kampa",
       "icon": "✍️",
       "tags": ["英語", "ライティング", "AI", "添削"],
-      "targetLevel": ["高1", "高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Next.js", "Gemini API"],
       "lastUpdated": "2026-04-30"
     },
@@ -103,7 +103,7 @@
       "access": "kampa",
       "icon": "📒",
       "tags": ["英語", "ライティング", "Anki"],
-      "targetLevel": ["中学","高校"],
+      "targetLevel": ["中学", "高校"],
       "techStack": ["Anki"],
       "lastUpdated": "2026-04-30"
     },
@@ -118,7 +118,7 @@
       "access": "kampa",
       "icon": "🗣️",
       "tags": ["英語", "スピーキング", "AI", "音声"],
-      "targetLevel": ["高1", "高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Next.js", "Gemini API", "Google TTS"],
       "lastUpdated": "2026-04-30"
     },
@@ -133,7 +133,7 @@
       "access": "kampa",
       "icon": "🎧",
       "tags": ["英語", "リスニング", "AI", "共テ", "英検", "TEAP"],
-      "targetLevel": ["高1", "高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Next.js", "Gemini API", "Google TTS"],
       "lastUpdated": "2026-04-30"
     },
@@ -148,7 +148,7 @@
       "access": "kampa",
       "icon": "📰",
       "tags": ["現代文", "要約"],
-      "targetLevel": ["高1", "高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Anki"],
       "lastUpdated": "2026-04-30"
     },
@@ -163,7 +163,7 @@
       "access": "kampa",
       "icon": "🎴",
       "tags": ["古文", "単語"],
-      "targetLevel": ["高1", "高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Anki"],
       "lastUpdated": "2026-04-30"
     },
@@ -178,7 +178,7 @@
       "access": "free",
       "icon": "📜",
       "tags": ["古文", "多読", "読解"],
-      "targetLevel": ["高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["静的HTML"],
       "lastUpdated": "2026-04-30"
     },
@@ -193,7 +193,7 @@
       "access": "free",
       "icon": "🧩",
       "tags": ["古文", "品詞分解", "文法"],
-      "targetLevel": ["高1", "高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["静的HTML"],
       "lastUpdated": "2026-04-30"
     },
@@ -208,7 +208,7 @@
       "access": "free",
       "icon": "🀄",
       "tags": ["漢文", "句形"],
-      "targetLevel": ["高1", "高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Anki"],
       "lastUpdated": "2026-04-30"
     },
@@ -223,7 +223,7 @@
       "access": "kampa",
       "icon": "📐",
       "tags": ["数学", "公式", "ドリル", "Anki"],
-      "targetLevel": ["高1", "高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Next.js"],
       "lastUpdated": "2026-04-30"
     },
@@ -238,7 +238,7 @@
       "access": "kampa",
       "icon": "💬",
       "tags": ["数学", "AI", "問題演習"],
-      "targetLevel": ["高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Gemini API"],
       "lastUpdated": "2026-04-30"
     },
@@ -253,7 +253,7 @@
       "access": "kampa",
       "icon": "⚗️",
       "tags": ["化学", "暗記"],
-      "targetLevel": ["高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["未定"],
       "lastUpdated": "2026-04-30"
     },
@@ -268,7 +268,7 @@
       "access": "kampa",
       "icon": "🏛",
       "tags": ["世界史", "暗記"],
-      "targetLevel": ["高1", "高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Anki"],
       "lastUpdated": "2026-04-30"
     },
@@ -283,7 +283,7 @@
       "access": "kampa",
       "icon": "🏯",
       "tags": ["日本史", "暗記"],
-      "targetLevel": ["高1", "高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Anki"],
       "lastUpdated": "2026-04-30"
     },
@@ -298,7 +298,7 @@
       "access": "kampa",
       "icon": "🌏",
       "tags": ["地理", "暗記"],
-      "targetLevel": ["高1", "高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Anki"],
       "lastUpdated": "2026-04-30"
     },
@@ -313,7 +313,7 @@
       "access": "kampa",
       "icon": "🤝",
       "tags": ["公共", "暗記"],
-      "targetLevel": ["高1", "高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Anki"],
       "lastUpdated": "2026-05-08"
     },
@@ -328,7 +328,7 @@
       "access": "kampa",
       "icon": "💹",
       "tags": ["政治・経済", "暗記"],
-      "targetLevel": ["高1", "高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Anki"],
       "lastUpdated": "2026-05-08"
     },
@@ -343,7 +343,7 @@
       "access": "kampa",
       "icon": "⚖️",
       "tags": ["倫理", "暗記"],
-      "targetLevel": ["高1", "高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Anki"],
       "lastUpdated": "2026-05-08"
     },
@@ -358,7 +358,7 @@
       "access": "free",
       "icon": "💻",
       "tags": ["情報Ⅰ", "暗記"],
-      "targetLevel": ["高2", "高3"],
+      "targetLevel": ["高校"],
       "techStack": ["Anki"],
       "lastUpdated": "2026-04-30"
     }

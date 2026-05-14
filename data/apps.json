@@ -288,19 +288,34 @@
       "lastUpdated": "2026-05-10"
     },
     {
+      "id": "history-essay",
+      "name": "世界史・日本史記述対策",
+      "subject": "history",
+      "category": "drill",
+      "description": "気軽に記述問題対策、AIが添削します！世界史123問、日本史150問を用意。",
+      "url": "https://history-essay.vercel.app/",
+      "status": "production",
+      "access": "kampa",
+      "icon": "✒️ ",
+      "tags": ["世界史", "日本史", "記述"],
+      "targetLevel": ["高校"],
+      "techStack": ["Next.js", "Gemini API"],
+      "lastUpdated": "2026-05-14"
+    },
+    {
       "id": "history-geography",
       "name": "地理用語集",
       "subject": "history",
       "category": "memorize",
-      "description": "(Ankiで搭載予定)地理の用語集。記憶用。",
-      "url": "",
-      "status": "planned",
+      "description": "(Ankiアプリ)地理の用語集。共テ民は基本デッキをさっさと覚えて、過去問演習に時間をかけよう。",
+      "url": "https://anki-seven-black.vercel.app/",
+      "status": "production",
       "access": "kampa",
       "icon": "🌏",
       "tags": ["地理", "暗記"],
       "targetLevel": ["高校"],
       "techStack": ["Anki"],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-05-14"
     },
     {
       "id": "civics-public",

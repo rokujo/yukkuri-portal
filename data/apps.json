@@ -135,7 +135,7 @@
       "tags": ["英語", "リスニング", "AI", "共テ", "英検", "TEAP"],
       "targetLevel": ["高校"],
       "techStack": ["Next.js", "Gemini API", "Google TTS"],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2025-04-30"
     },
     {
       "id": "japanese-100-summary",
@@ -150,7 +150,7 @@
       "tags": ["現代文", "要約"],
       "targetLevel": ["高校"],
       "techStack": ["Anki"],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2025-04-30"
     },
     {
       "id": "japanese-kobun-tangoi",
@@ -195,7 +195,7 @@
       "tags": ["古文", "品詞分解", "文法"],
       "targetLevel": ["高校"],
       "techStack": ["静的HTML"],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2025-04-30"
     },
     {
       "id": "japanese-kanbun-kukei",
@@ -210,7 +210,7 @@
       "tags": ["漢文", "句形"],
       "targetLevel": ["高校"],
       "techStack": ["Anki"],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2025-04-30"
     },
     {
       "id": "math-formula-drill",
@@ -225,7 +225,7 @@
       "tags": ["数学", "公式", "ドリル", "Anki"],
       "targetLevel": ["高校"],
       "techStack": ["Next.js"],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2025-04-30"
     },
     {
       "id": "math-conversation",
@@ -240,7 +240,7 @@
       "tags": ["数学", "AI", "問題演習"],
       "targetLevel": ["高校"],
       "techStack": ["Gemini API"],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2025-04-30"
     },
     {
       "id": "chemistry-memorize",
@@ -255,7 +255,7 @@
       "tags": ["化学", "暗記"],
       "targetLevel": ["高校"],
       "techStack": ["Next.js"],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2025-04-30"
     },
     {
       "id": "history-world",

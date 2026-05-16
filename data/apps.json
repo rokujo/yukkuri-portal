@@ -10,7 +10,7 @@
       "halfYear": 2000,
       "year": 3500,
       "currency": "JPY",
-      "paymentMethods": ["銀行振込", "手渡し"],
+      "paymentMethods": ["銀行振込", "PayPay送金", "手渡し"],
       "studentsFree": true,
       "passwordRotationMonths": 6
     }
@@ -127,9 +127,9 @@
       "name": "英語リスニング",
       "subject": "english",
       "category": "listening",
-      "description": "共テ・英検・TEAP対策。AIが問題を生成、レベル別に練習可能。",
+      "description": "（実装予定）共テ・英検・TEAP対策。AIが問題を生成、レベル別に練習可能。",
       "url": "",
-      "status": "alpha",
+      "status": "planned",
       "access": "kampa",
       "icon": "🎧",
       "tags": ["英語", "リスニング", "AI", "共テ", "英検", "TEAP"],

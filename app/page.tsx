@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import WhatsNew from "@/components/WhatsNew";
 import KampaInfo from "@/components/KampaInfo";
 import SubjectNav from "@/components/SubjectNav";
 import SubjectSection from "@/components/SubjectSection";
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Header />
       <main>
         <HeroSection />
+        <WhatsNew />
         <KampaInfo />
         <div className="bg-kinari-deep/30 border-y border-sumi/5 pb-8">
           <SubjectNav subjects={subjects} />

@@ -111,3 +111,26 @@ export function isNew(app: AppData, today: Date = new Date()): boolean {
   const days = diffMs / (1000 * 60 * 60 * 24);
   return days >= 0 && days <= 30;
 }
+
+export function getRecentlyUpdatedGroups(
+  daysWindow: number = 30,
+  today: Date = new Date()
+): { date: string; apps: AppData[] }[] {
+  const todayMs = today.getTime();
+  const windowMs = daysWindow * 24 * 60 * 60 * 1000;
+  const within = data.apps.filter((app) => {
+    const updated = new Date(app.lastUpdated).getTime();
+    if (Number.isNaN(updated)) return false;
+    const diff = todayMs - updated;
+    return diff >= 0 && diff <= windowMs;
+  });
+  const map = new Map<string, AppData[]>();
+  for (const app of within) {
+    const list = map.get(app.lastUpdated) ?? [];
+    list.push(app);
+    map.set(app.lastUpdated, list);
+  }
+  return Array.from(map.entries())
+    .sort((a, b) => (a[0] < b[0] ? 1 : -1))
+    .map(([date, apps]) => ({ date, apps }));
+}

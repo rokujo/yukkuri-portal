@@ -247,14 +247,14 @@
       "name": "化学暗記",
       "subject": "chemistry",
       "category": "memorize",
-      "description": "(Ankiで搭載予定)化学の暗記事項（無機の沈殿色、有機の反応など）を効率的に覚える。",
+      "description": "化学の暗記事項（半反応式、無機の色・沈殿の有無、有機の反応など）を効率的に覚える。復習機能も搭載予定。",
       "url": "",
       "status": "planned",
       "access": "kampa",
       "icon": "⚗️",
       "tags": ["化学", "暗記"],
       "targetLevel": ["高校"],
-      "techStack": ["未定"],
+      "techStack": ["Next.js"],
       "lastUpdated": "2026-04-30"
     },
     {

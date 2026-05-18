@@ -204,7 +204,7 @@
       "category": "kobun",
       "description": "源氏物語を読んでみよう！現代語訳、詳細な解説付き。重要用語から和歌、敬語、古文常識まで総合的に学べる。現在、2/54帖対応。",
       "url": "https://greenfrog.sakura.ne.jp/genji",
-      "status": "beta",
+      "status": "production",
       "access": "free",
       "icon": "🌸",
       "tags": ["古文", "多読", "読解"],
@@ -263,14 +263,14 @@
       "subject": "chemistry",
       "category": "memorize",
       "description": "化学の暗記事項（半反応式、無機の色・沈殿の有無、有機の反応など）を効率的に覚える。復習機能も搭載予定。",
-      "url": "",
-      "status": "planned",
-      "access": "kampa",
+      "url": "https://chem-memory.vercel.app/",
+      "status": "beta",
+      "access": "free",
       "icon": "⚗️",
       "tags": ["化学", "暗記"],
       "targetLevel": ["高校"],
       "techStack": ["Next.js"],
-      "lastUpdated": "2025-04-30"
+      "lastUpdated": "2025-05-19"
     },
     {
       "id": "history-world",

@@ -259,7 +259,7 @@
     },
     {
       "id": "chemistry-memorize",
-      "name": "化学暗記",
+      "name": "化学暗記帳",
       "subject": "chemistry",
       "category": "memorize",
       "description": "化学の暗記事項（半反応式、無機の色・沈殿の有無、有機の反応など）を効率的に覚える。復習機能も搭載予定。",

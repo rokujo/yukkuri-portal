@@ -33,6 +33,21 @@
       "lastUpdated": "2026-05-04"
     },
     {
+      "id": "english-yukkuri2000-reader",
+      "name": "ゆっくり速読2000",
+      "subject": "english",
+      "category": "reading",
+      "description": "ゆっくり英単語2000から1000語以上を詰め込んだ長文を読んで、語彙の定着を図る。実力のチェックにも使える。",
+      "url": "https://greenfrog.sakura.ne.jp/yukkuri/reader.html",
+      "status": "production",
+      "access": "free",
+      "icon": "📘",
+      "tags": ["英語", "速読", "読解", "長文"],
+      "targetLevel": ["高校"],
+      "techStack": ["静的HTML"],
+      "lastUpdated": "2026-05-22"
+    },
+    {
       "id": "english-wordflow",
       "name": "WordFlow(文脈型単語)",
       "subject": "english",

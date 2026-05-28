@@ -18,6 +18,21 @@
   "subjectOrder": ["english", "japanese", "math", "chemistry", "history", "civics", "information"],
   "apps": [
     {
+      "id": "anki",
+      "name": "Anki Web 自作デッキ",
+      "subject": "english",
+      "category": "general",
+      "description": "覚えたい単語や表現を自動的に復習。例文や和訳はAIがサポート。",
+      "url": "https://anki-seven-black.vercel.app/",
+      "status": "production",
+      "access": "free",
+      "icon": "🗂️",
+      "tags": ["英語", "単語", "Anki"],
+      "targetLevel": ["高校"],
+      "techStack": ["Anki"],
+      "lastUpdated": "2026-05-28"
+    },
+    {
       "id": "english-yukkuri2000",
       "name": "ゆっくり英単語2000",
       "subject": "english",
@@ -285,7 +300,7 @@
       "tags": ["化学", "暗記"],
       "targetLevel": ["高校"],
       "techStack": ["Next.js"],
-      "lastUpdated": "2025-05-19"
+      "lastUpdated": "2026-05-28"
     },
     {
       "id": "history-world",
@@ -326,7 +341,7 @@
       "url": "https://history-essay.vercel.app/",
       "status": "production",
       "access": "kampa",
-      "icon": "✒️ ",
+      "icon": "✒️",
       "tags": ["世界史", "日本史", "記述"],
       "targetLevel": ["高校"],
       "techStack": ["Next.js", "Gemini API"],

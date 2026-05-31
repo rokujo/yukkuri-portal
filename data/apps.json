@@ -15,7 +15,7 @@
       "passwordRotationMonths": 6
     }
   },
-  "subjectOrder": ["english", "japanese", "math", "chemistry", "history", "civics", "information"],
+  "subjectOrder": ["english", "japanese", "math", "chemistry", "biology", "history", "civics", "information"],
   "apps": [
     {
       "id": "anki",
@@ -71,7 +71,7 @@
       "url": "https://greenfrog.sakura.ne.jp/yukkuri/final/",
       "status": "production",
       "access": "free",
-      "icon": "📘",
+      "icon": "📕",
       "tags": ["英語", "読解", "長文"],
       "targetLevel": ["高校"],
       "techStack": ["静的HTML"],
@@ -303,11 +303,41 @@
       "lastUpdated": "2025-04-30"
     },
     {
+      "id": "biology-basic-anki",
+      "name": "生物基礎一問一答",
+      "subject": "biology",
+      "category": "memorize",
+      "description": "(Ankiで搭載予定)赤シートの時代は終わり！近日公開予定",
+      "url": "",
+      "status": "planned",
+      "access": "kampa",
+      "icon": "🌱",
+      "tags": ["生物", "暗記"],
+      "targetLevel": ["高校"],
+      "techStack": ["Anki"],
+      "lastUpdated": "2025-05-28"
+    },
+    {
+      "id": "biology-anki",
+      "name": "生物一問一答",
+      "subject": "biology",
+      "category": "memorize",
+      "description": "(Ankiで搭載予定)理系も頑張れ！近日公開予定",
+      "url": "",
+      "status": "planned",
+      "access": "kampa",
+      "icon": "🧬",
+      "tags": ["生物", "暗記"],
+      "targetLevel": ["高校"],
+      "techStack": ["Anki"],
+      "lastUpdated": "2025-05-28"
+    },
+    {
       "id": "chemistry-memorize",
       "name": "化学暗記帳",
       "subject": "chemistry",
       "category": "memorize",
-      "description": "化学の暗記事項（半反応式、無機の色・沈殿の有無、有機の反応など）を効率的に覚える。復習機能も搭載予定。",
+      "description": "化学の暗記事項（半反応式、無機の色・沈殿の有無、有機の反応など）を効率的に覚える。復習機能も搭載。",
       "url": "https://chem-memory.vercel.app/",
       "status": "beta",
       "access": "free",
@@ -316,6 +346,36 @@
       "targetLevel": ["高校"],
       "techStack": ["Next.js"],
       "lastUpdated": "2026-05-28"
+    },
+    {
+      "id": "chemistry-basic-anki",
+      "name": "化学基礎一問一答",
+      "subject": "chemistry",
+      "category": "memorize",
+      "description": "(Ankiで搭載予定)化学も暗記！基礎事項を確実にせよ！近日公開予定",
+      "url": "",
+      "status": "planned",
+      "access": "kampa",
+      "icon": "🧪",
+      "tags": ["化学", "暗記"],
+      "targetLevel": ["高校"],
+      "techStack": ["Anki"],
+      "lastUpdated": "2025-05-28"
+    },
+    {
+      "id": "chemistry-anki",
+      "name": "化学一問一答",
+      "subject": "chemistry",
+      "category": "memorize",
+      "description": "(Ankiで搭載予定)無機有機を得点源に！近日公開予定",
+      "url": "",
+      "status": "planned",
+      "access": "kampa",
+      "icon": "⚛️",
+      "tags": ["化学", "暗記"],
+      "targetLevel": ["高校"],
+      "techStack": ["Anki"],
+      "lastUpdated": "2025-05-28"
     },
     {
       "id": "history-world",

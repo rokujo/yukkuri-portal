@@ -304,18 +304,18 @@
     },
     {
       "id": "biology-basic-anki",
-      "name": "生物基礎一問一答",
+      "name": "生物基礎問題集",
       "subject": "biology",
       "category": "memorize",
-      "description": "(Ankiで搭載予定)赤シートの時代は終わり！近日公開予定",
-      "url": "",
-      "status": "planned",
+      "description": "(Ankiアプリ)赤シートの時代は終わり！共テレベルまでこの問題集でかなり行けるはず！",
+      "url": "https://anki-seven-black.vercel.app/",
+      "status": "production",
       "access": "kampa",
       "icon": "🌱",
       "tags": ["生物", "暗記"],
       "targetLevel": ["高校"],
       "techStack": ["Anki"],
-      "lastUpdated": "2025-05-28"
+      "lastUpdated": "2026-07-08"
     },
     {
       "id": "biology-anki",

@@ -1,4 +1,4 @@
-// 上松ゆっくり塾 窓口サイト Service Worker
+// ゆっくり塾 窓口サイト Service Worker
 // 目的:
 //  1. Android Chrome の PWA インストール条件（fetchハンドラを持つSW）を満たす
 //  2. 軽いオフラインフォールバック（一度開いたページは再表示できる）

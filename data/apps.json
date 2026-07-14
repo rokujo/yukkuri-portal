@@ -2,15 +2,15 @@
   "version": "1.0",
   "lastUpdated": "2026-04-30",
   "site": {
-    "name": "上松ゆっくり塾",
-    "tagline": "上松ゆっくり塾の、ありそうでなかった学習アプリ",
+    "name": "ゆっくり塾",
+    "tagline": "ゆっくり塾の、ありそうでなかった学習アプリ",
     "description": "現場の指導から生まれた学習アプリ群。AIを使いながら、生徒のペースに寄り添います。",
-    "blogUrl": "https://ameblo.jp/yukkuri-jyuku/entry-12951539399.html",
+    "blogUrl": "https://note.com/yukkuri_jyuku",
     "kampaInfo": {
       "halfYear": 2000,
       "year": 3500,
       "currency": "JPY",
-      "paymentMethods": ["銀行振込", "PayPay送金", "手渡し"],
+      "paymentMethods": ["クレジットカード決済（Stripe）", "note内の決済（一部商品）"],
       "studentsFree": true,
       "passwordRotationMonths": 6
     }

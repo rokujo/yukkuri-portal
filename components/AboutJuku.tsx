@@ -36,12 +36,12 @@ export default function AboutJuku() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-kinari text-ai px-6 py-3 rounded-md text-sm font-medium hover:bg-white hover:-translate-y-0.5 hover:shadow-soft-hover transition-all"
           >
-            塾紹介・体験授業の案内（アメブロ）
+            塾紹介・体験授業の案内（note）
             <span aria-hidden>↗</span>
           </a>
 
           <p className="text-xs text-kinari/60 mt-5">
-            お問い合わせ・体験授業のお申し込みはアメブロ記事のコメント欄からお願いします。
+            お問い合わせ・体験授業のお申し込みはnote記事のコメント欄からお願いします。
           </p>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "塾生エリア ｜ 上松ゆっくり塾",
+  title: "塾生エリア ｜ ゆっくり塾",
   robots: {
     index: false,
     follow: false,

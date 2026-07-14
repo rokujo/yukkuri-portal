@@ -28,7 +28,10 @@
       "Bash(curl -s http://localhost:3000/manifest.webmanifest)",
       "Bash(curl -s -o /dev/null -w \"GET /students -u student:test1234 -> %{http_code}\\\\n\" -u student:test1234 http://localhost:3000/students)",
       "Bash(curl -s -o /dev/null -w \"GET /students no auth -> %{http_code}\\\\n\" http://localhost:3000/students)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(npx tsc *)",
+      "Bash(git check-ignore *)",
+      "Bash(curl *)"
     ]
   }
 }

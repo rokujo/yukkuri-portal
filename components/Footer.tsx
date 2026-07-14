@@ -26,7 +26,13 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="block text-sumi-soft hover:text-ai transition-colors"
           >
-            塾ブログ（アメブロ）↗
+            塾ブログ（note）↗
+          </a>
+          <a
+            href="/tokushoho"
+            className="block text-sumi-soft hover:text-ai transition-colors"
+          >
+            特定商取引法に基づく表記
           </a>
           <a
             href="#top"

@@ -79,10 +79,9 @@ export default function KampaInfo() {
                 パスワード発行の流れ
               </h3>
               <ol className="list-decimal list-inside space-y-1 text-sumi-soft marker:text-matcha">
-                <li>note経由でご購入のご連絡をいただく</li>
-                <li>ご入金確認後、各アプリのパスワードをまとめてお伝え</li>
+                <li>Stripeで決済いただく</li>
                 <li>
-                  パスワードは{kampaInfo.passwordRotationMonths}か月ごとに更新（次回継続時に再発行）
+                  決済後にユーザー名・パスワードが表示されます（メールには記載されないため、必ず保存してください）
                 </li>
               </ol>
             </div>

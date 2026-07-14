@@ -12,6 +12,7 @@
 - Stripeの審査要件として、特定商取引法に基づく表記ページ（`/tokushoho`）を新設・公開済み（詳細は4.3節）
 - 「ゆっくり塾」ブランドは教材販売（このサイト・note）として、対面指導を行う塾本体とはブランドを切り離す。ABOUTセクション等で地域情報（長野県内）や体験授業の案内など、対面指導に紐づく訴求はしない（詳細は6.7節）
 - カンパの料金体系を単一プランから2段階プランに変更（詳細は5.4節）：Anki等の静的コンテンツのみの**スタンダードプラン**（半年2,000円／年3,500円）と、AIを使った動的コンテンツも使える**プレミアムプラン**（月480円／年4,800円）
+- スタンダードプランはStripe決済リンクを発行済み（`kampaInfo.standard.halfYearUrl`/`yearUrl`）。プレミアムプランは決済リンク未発行のため「準備中」表示（決済リンクができ次第、同様に追加する）
 
 ### 1.1 塾の世界観
 
@@ -171,7 +172,12 @@ Stripe決済導入の審査要件として設置した公開ページ（`app/tok
     "description": "現場の指導から生まれた学習アプリ群。AIを使いながら、生徒のペースに寄り添います。",
     "blogUrl": "https://note.com/yukkuri_jyuku",
     "kampaInfo": {
-      "standard": { "halfYear": 2000, "year": 3500 },
+      "standard": {
+        "halfYear": 2000,
+        "year": 3500,
+        "halfYearUrl": "https://buy.stripe.com/xxxxx",
+        "yearUrl": "https://buy.stripe.com/xxxxx"
+      },
       "premium": { "month": 480, "year": 4800 },
       "currency": "JPY",
       "paymentMethods": ["クレジットカード決済（Stripe）", "note内の決済（一部商品）"],
@@ -248,7 +254,12 @@ type PlanTier =
     "description": "現場の指導から生まれた学習アプリ群。AIを使いながら、生徒のペースに寄り添います。",
     "blogUrl": "https://note.com/yukkuri_jyuku",
     "kampaInfo": {
-      "standard": { "halfYear": 2000, "year": 3500 },
+      "standard": {
+        "halfYear": 2000,
+        "year": 3500,
+        "halfYearUrl": "https://buy.stripe.com/xxxxx",
+        "yearUrl": "https://buy.stripe.com/xxxxx"
+      },
       "premium": { "month": 480, "year": 4800 },
       "currency": "JPY",
       "paymentMethods": ["クレジットカード決済（Stripe）", "note内の決済（一部商品）"],

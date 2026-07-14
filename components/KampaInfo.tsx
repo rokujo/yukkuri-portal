@@ -44,9 +44,29 @@ export default function KampaInfo() {
               <p className="text-xs text-sumi-soft mb-1.5">
                 Anki教材など、静的コンテンツが対象
               </p>
-              <ul className="space-y-1 text-sumi-soft">
-                <li>半年プラン：{yen(kampaInfo.standard.halfYear)}</li>
-                <li>年間プラン：{yen(kampaInfo.standard.year)}</li>
+              <ul className="space-y-2 text-sumi-soft">
+                <li className="flex items-center justify-between gap-3">
+                  <span>半年プラン：{yen(kampaInfo.standard.halfYear)}</span>
+                  <a
+                    href={kampaInfo.standard.halfYearUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 text-xs font-medium bg-ai text-kinari px-3 py-1.5 rounded-md hover:bg-ai/90 transition-colors"
+                  >
+                    購入する
+                  </a>
+                </li>
+                <li className="flex items-center justify-between gap-3">
+                  <span>年間プラン：{yen(kampaInfo.standard.year)}</span>
+                  <a
+                    href={kampaInfo.standard.yearUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 text-xs font-medium bg-ai text-kinari px-3 py-1.5 rounded-md hover:bg-ai/90 transition-colors"
+                  >
+                    購入する
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
@@ -56,9 +76,19 @@ export default function KampaInfo() {
               <p className="text-xs text-sumi-soft mb-1.5">
                 AIを使った動的コンテンツ（添削・会話・生成問題など）が対象
               </p>
-              <ul className="space-y-1 text-sumi-soft">
-                <li>月額プラン：{yen(kampaInfo.premium.month)}</li>
-                <li>年間プラン：{yen(kampaInfo.premium.year)}</li>
+              <ul className="space-y-2 text-sumi-soft">
+                <li className="flex items-center justify-between gap-3">
+                  <span>月額プラン：{yen(kampaInfo.premium.month)}</span>
+                  <span className="shrink-0 text-xs font-medium bg-gray-200 text-gray-600 px-3 py-1.5 rounded-md">
+                    準備中
+                  </span>
+                </li>
+                <li className="flex items-center justify-between gap-3">
+                  <span>年間プラン：{yen(kampaInfo.premium.year)}</span>
+                  <span className="shrink-0 text-xs font-medium bg-gray-200 text-gray-600 px-3 py-1.5 rounded-md">
+                    準備中
+                  </span>
+                </li>
               </ul>
             </div>
             <div className="sm:col-span-2 text-xs">

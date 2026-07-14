@@ -45,7 +45,12 @@ export type AppData = {
 };
 
 export type KampaInfo = {
-  standard: { halfYear: number; year: number };
+  standard: {
+    halfYear: number;
+    year: number;
+    halfYearUrl: string;
+    yearUrl: string;
+  };
   premium: { month: number; year: number };
   currency: string;
   paymentMethods: string[];

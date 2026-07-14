@@ -7,9 +7,11 @@
 ### 1.0 リブランドについて（2026年7月〜）
 
 - サイト名を「上松ゆっくり塾」から「ゆっくり塾」に変更し、既存の「上松ゆっくり塾」（別の塾）とはブランドを切り離す
-- 塾紹介・誘導元をアメブロから note へ移行済み。noteアカウント：**https://note.com/yukkuri_jyuku**（`site.blogUrl` を差し替え済み）
+- 塾紹介・誘導元をアメブロから note へ移行済み。noteアカウント：**https://note.com/yukkuri_jyuku**（`site.blogUrl` を差し替え済み）。noteはAnki教材パッケージの販売用チャネルとして運用する
 - カンパ（応援金）の支払い方法を銀行振込・PayPayから Stripe（クレジットカード決済）および note内の決済（一部商品）に変更済み
 - Stripeの審査要件として、特定商取引法に基づく表記ページ（`/tokushoho`）を新設・公開済み（詳細は4.3節）
+- 「ゆっくり塾」ブランドは教材販売（このサイト・note）として、対面指導を行う塾本体とはブランドを切り離す。ABOUTセクション等で地域情報（長野県内）や体験授業の案内など、対面指導に紐づく訴求はしない（詳細は6.7節）
+- カンパの料金体系を単一プランから2段階プランに変更（詳細は5.4節）：Anki等の静的コンテンツのみの**スタンダードプラン**（半年2,000円／年3,500円）と、AIを使った動的コンテンツも使える**プレミアムプラン**（月480円／年4,800円）
 
 ### 1.1 塾の世界観
 
@@ -21,8 +23,8 @@
 
 - 複数の学習アプリを一覧表示し、利用者が目的のアプリにアクセスできるようにする
 - 塾生は専用ページから全アプリのパスワードを取得できる
-- 一般利用者にはカンパ（応援金）制でアプリパスワードを配布する旨を案内する
-- 塾ブログ（note）（塾紹介）への導線を設置する
+- 一般利用者にはスタンダード／プレミアムの有料プランでアプリパスワードを配布する旨を案内する
+- 塾ブログ（note、教材販売チャネル）への導線を設置する
 
 ### 1.3 利用者層
 
@@ -111,8 +113,9 @@ portal-site/
 │     AIを使いながら、                    │
 │     生徒のペースに寄り添います。」       │
 ├─────────────────────────────────────┤
-│  カンパ・パスワード案内（折りたたみ）    │
-│  - 半年2,000円／年3,500円              │
+│  有料プラン案内（折りたたみ）          │
+│  - スタンダード：半年2,000円／年3,500円 │
+│  - プレミアム：月480円／年4,800円       │
 │  - 支払い方法                          │
 │  - パスワード発行の流れ                 │
 │  - 塾生は全アプリ無料の旨              │
@@ -125,10 +128,9 @@ portal-site/
 │  ├ 数学アプリ（追加されたら）           │
 │  └ 化学アプリ（追加されたら）           │
 ├─────────────────────────────────────┤
-│  塾紹介セクション                      │
-│  - 塾の簡単な説明                     │
-│  - 塾ブログへのリンク（note、メインサイト） │
-│  - 連絡先・体験授業案内                │
+│  ABOUTセクション                       │
+│  - ゆっくり塾の簡単な説明（教材紹介）    │
+│  - 塾ブログへのリンク（note、教材購入）  │
 ├─────────────────────────────────────┤
 │  フッター                              │
 │  - 特定商取引法に基づく表記へのリンク    │
@@ -169,8 +171,8 @@ Stripe決済導入の審査要件として設置した公開ページ（`app/tok
     "description": "現場の指導から生まれた学習アプリ群。AIを使いながら、生徒のペースに寄り添います。",
     "blogUrl": "https://note.com/yukkuri_jyuku",
     "kampaInfo": {
-      "halfYear": 2000,
-      "year": 3500,
+      "standard": { "halfYear": 2000, "year": 3500 },
+      "premium": { "month": 480, "year": 4800 },
       "currency": "JPY",
       "paymentMethods": ["クレジットカード決済（Stripe）", "note内の決済（一部商品）"],
       "studentsFree": true,
@@ -197,6 +199,7 @@ type AppData = {
   url: string;                   // アプリのURL
   status: AppStatus;             // 開発状況
   access: AccessType;            // アクセス権限
+  planTier?: PlanTier;           // access: "kampa" のときのみ意味を持つ
   icon: string;                  // 絵文字 or 画像パス
   tags: string[];                // 検索・フィルタ用
   targetLevel: string[];         // 対象学年
@@ -215,12 +218,25 @@ type AppStatus =
 
 type AccessType = 
   | "free"            // 完全無料
-  | "kampa"           // カンパ制パスワード
+  | "kampa"           // 有料プラン（スタンダード/プレミアム）
   | "students_only"   // 塾生限定
   | "auth_required";  // 要認証（汎用）
+
+type PlanTier =
+  | "standard"  // Anki等の静的コンテンツ。半年2,000円／年3,500円
+  | "premium";  // AIを使った動的コンテンツ。月480円／年4,800円
 ```
 
-### 5.3 apps.json サンプル（既存アプリ反映版）
+### 5.4 有料プラン（スタンダード／プレミアム）の分類基準
+
+`access: "kampa"` のアプリは必ず `planTier` を設定する。
+
+- **standard**：Anki（Web版）等、事前に用意された静的なコンテンツを配信するだけのアプリ。`techStack` が `["Anki"]` や静的HTMLのもの
+- **premium**：AI（Gemini API等）を使い、問題生成・添削・採点などを都度動的に行うアプリ。`techStack` に `Next.js` + `Gemini API` 等を含むもの
+
+`techStack` と `description`（AI採点/生成を謳っているか等）が矛盾する場合は、黙って推測せず必ずユーザーに確認してから `planTier` を決定すること。
+
+### 5.5 apps.json サンプル（既存アプリ反映版）
 
 ```json
 {
@@ -232,8 +248,8 @@ type AccessType =
     "description": "現場の指導から生まれた学習アプリ群。AIを使いながら、生徒のペースに寄り添います。",
     "blogUrl": "https://note.com/yukkuri_jyuku",
     "kampaInfo": {
-      "halfYear": 2000,
-      "year": 3500,
+      "standard": { "halfYear": 2000, "year": 3500 },
+      "premium": { "month": 480, "year": 4800 },
       "currency": "JPY",
       "paymentMethods": ["クレジットカード決済（Stripe）", "note内の決済（一部商品）"],
       "studentsFree": true,
@@ -266,6 +282,7 @@ type AccessType =
       "url": "[アプリURL未確定]",
       "status": "beta",
       "access": "kampa",
+      "planTier": "premium",
       "icon": "✍️",
       "tags": ["英語", "ライティング", "AI", "添削"],
       "targetLevel": ["高1", "高2", "高3"],
@@ -281,6 +298,7 @@ type AccessType =
       "url": "[アプリURL未確定]",
       "status": "alpha",
       "access": "kampa",
+      "planTier": "premium",
       "icon": "🗣️",
       "tags": ["英語", "スピーキング", "AI", "音声"],
       "targetLevel": ["高1", "高2", "高3"],
@@ -296,6 +314,7 @@ type AccessType =
       "url": "[アプリURL未確定]",
       "status": "alpha",
       "access": "kampa",
+      "planTier": "premium",
       "icon": "🎧",
       "tags": ["英語", "リスニング", "AI", "共テ", "英検", "TEAP"],
       "targetLevel": ["高1", "高2", "高3"],
@@ -311,6 +330,7 @@ type AccessType =
       "url": "",
       "status": "development",
       "access": "kampa",
+      "planTier": "premium",
       "icon": "📖",
       "tags": ["英語", "リーディング", "AI"],
       "targetLevel": ["高2", "高3"],
@@ -326,6 +346,7 @@ type AccessType =
       "url": "",
       "status": "planned",
       "access": "kampa",
+      "planTier": "premium",
       "icon": "🧠",
       "tags": ["英語", "単語", "AI", "Anki"],
       "targetLevel": ["高1", "高2", "高3"],
@@ -371,10 +392,11 @@ type AccessType =
       "url": "",
       "status": "planned",
       "access": "kampa",
+      "planTier": "standard",
       "icon": "📐",
       "tags": ["数学", "公式", "ドリル", "Anki"],
       "targetLevel": ["高1", "高2", "高3"],
-      "techStack": ["Next.js"],
+      "techStack": ["Anki"],
       "lastUpdated": "2026-04-30"
     },
     {
@@ -386,6 +408,7 @@ type AccessType =
       "url": "",
       "status": "planned",
       "access": "kampa",
+      "planTier": "standard",
       "icon": "⚗️",
       "tags": ["化学", "暗記"],
       "targetLevel": ["高2", "高3"],
@@ -436,7 +459,8 @@ type AccessType =
 | `status: development` | 🔧 開発中 | グレー |
 | `status: planned` | 💭 構想中 | 薄グレー |
 | `access: free` | 🆓 無料 | 緑 |
-| `access: kampa` | 🔐 カンパ制 | 青 |
+| `access: kampa` かつ `planTier: standard` | 🔐 スタンダード | 青 |
+| `access: kampa` かつ `planTier: premium` | 💎 プレミアム | 藍（インディゴ） |
 | `access: students_only` | 👥 塾生限定 | 紫 |
 | `lastUpdated`が30日以内 | ✨ NEW | 赤 |
 
@@ -473,6 +497,15 @@ const SUBJECT_NAMES = {
 - 色だけでなくテキストでも情報を伝える（バッジは色＋文字）
 - 適切なコントラスト比を確保
 - セマンティックなHTML
+
+### 6.7 ABOUTセクションの文言方針（塾本体との切り離し）
+
+「ゆっくり塾」ブランドはこのサイト・noteでの教材販売専業とし、実際に対面指導を行う塾本体とは切り離す（2026年7月〜）。`components/AboutJuku.tsx` では以下を守る。
+
+- 地域を特定する表現（「長野県内の」等）は入れない。「小中高生を対象とした、個別指導・少人数制の塾です。」のように地域に触れない表現にする
+- 体験授業の案内・お申し込み導線は入れない（対面指導の勧誘に見えるため）
+- noteへのリンク文言は「教材のご紹介・購入はnoteへ」のように、教材販売の導線であることを明示する
+- 問い合わせ文言も「ご質問はnote記事のコメント欄から」など、体験授業に限定しない汎用表現にする
 
 frontend-design スキル（/mnt/skills/public/frontend-design/SKILL.md）の指針に従うこと。
 
@@ -586,9 +619,10 @@ export const config = {
 - noteアカウントURL：**https://note.com/yukkuri_jyuku**（`site.blogUrl` 差し替え済み、アメブロは運用終了）
 - キャッチコピー：**ゆっくり塾の、ありそうでなかった学習アプリ**
 - 説明文：**現場の指導から生まれた学習アプリ群。AIを使いながら、生徒のペースに寄り添います。**
-- カンパ価格：**半年2,000円／年3,500円**（塾生は無料）
-- カンパの支払い方法：**クレジットカード決済（Stripe）／note内の決済（一部商品）**に移行済み（銀行振込・PayPayは廃止）
-- 特定商取引法に基づく表記ページ（`/tokushoho`）を新設・公開済み（Stripe審査対応）
+- 有料プラン価格：**スタンダード（半年2,000円／年3,500円）／プレミアム（月480円／年4,800円）**（塾生は無料）
+- 支払い方法：**クレジットカード決済（Stripe）／note内の決済（一部商品）**に移行済み（銀行振込・PayPayは廃止）
+- 特定商取引法に基づく表記ページ（`/tokushoho`）を新設・公開済み（Stripe審査対応、Anki動作環境に関する記述は不要のため削除済み）
+- 「ゆっくり塾」は教材販売ブランドとして塾本体（対面指導）と切り離し済み。ABOUTセクションから地域情報・体験授業案内を削除済み
 
 ### 12.2 塾長から後日受け取る情報
 

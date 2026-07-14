@@ -31,7 +31,11 @@
       "Bash(npm run *)",
       "Bash(npx tsc *)",
       "Bash(git check-ignore *)",
-      "Bash(curl *)"
+      "Bash(curl *)",
+      "Bash(powershell -Command \"Get-Item '特定商取引法に基づく表記.md' | Select-Object LastWriteTime, Length\" 2>&1)",
+      "Bash(node *)",
+      "Bash(powershell -Command \"Get-CimInstance Win32_Process -Filter \\\\\"Name='node.exe'\\\\\" | Select-Object ProcessId, CommandLine | Format-List\")",
+      "Bash(powershell -Command \"Stop-Process -Id 71208,74764,48752 -Force -ErrorAction SilentlyContinue\")"
     ]
   }
 }

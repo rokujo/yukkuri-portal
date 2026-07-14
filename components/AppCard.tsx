@@ -30,7 +30,7 @@ export default function AppCard({ app }: Props) {
         <div className="flex flex-wrap gap-1.5 justify-end">
           <NewBadge app={app} />
           <StatusBadge status={app.status} />
-          <AccessBadge access={app.access} />
+          <AccessBadge app={app} />
         </div>
       </div>
 

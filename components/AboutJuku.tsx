@@ -23,7 +23,7 @@ export default function AboutJuku() {
             {site.name}について
           </h2>
           <p className="text-sm sm:text-base leading-relaxed text-kinari/90 mb-4">
-            長野県内の小中高生を対象とした、個別指導・少人数制の塾です。
+            小中高生を対象とした、個別指導・少人数制の塾です。
           </p>
           <p className="text-sm sm:text-base leading-relaxed text-kinari/90 mb-8">
             「ゆっくり」は、急がせない・理解を飛ばさない・生徒のペースを大切にすることを意味します。
@@ -36,12 +36,12 @@ export default function AboutJuku() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-kinari text-ai px-6 py-3 rounded-md text-sm font-medium hover:bg-white hover:-translate-y-0.5 hover:shadow-soft-hover transition-all"
           >
-            塾紹介・体験授業の案内（note）
+            教材のご紹介・購入はnoteへ
             <span aria-hidden>↗</span>
           </a>
 
           <p className="text-xs text-kinari/60 mt-5">
-            お問い合わせ・体験授業のお申し込みはnote記事のコメント欄からお願いします。
+            ご質問はnote記事のコメント欄からお願いします。
           </p>
         </div>
       </div>

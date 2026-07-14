@@ -18,10 +18,11 @@ export default function KampaInfo() {
             </span>
             <div>
               <p className="font-serif text-base sm:text-lg font-semibold text-sumi">
-                カンパ制について（応援金でパスワード発行）
+                有料プランについて（教材の購入）
               </p>
               <p className="text-xs sm:text-sm text-sumi-soft mt-0.5">
-                半年 {yen(kampaInfo.halfYear)} ／ 年 {yen(kampaInfo.year)}
+                スタンダード 半年 {yen(kampaInfo.standard.halfYear)} ／
+                プレミアム 月 {yen(kampaInfo.premium.month)}
                 ・塾生は無料
               </p>
             </div>
@@ -38,15 +39,30 @@ export default function KampaInfo() {
           <div className="grid sm:grid-cols-2 gap-x-8 gap-y-5 mt-4">
             <div>
               <h3 className="font-serif text-base font-semibold text-ai mb-2">
-                料金
+                🔐 スタンダードプラン
               </h3>
+              <p className="text-xs text-sumi-soft mb-1.5">
+                Anki教材など、静的コンテンツが対象
+              </p>
               <ul className="space-y-1 text-sumi-soft">
-                <li>半年プラン：{yen(kampaInfo.halfYear)}</li>
-                <li>年間プラン：{yen(kampaInfo.year)}</li>
-                <li className="text-xs mt-2">
-                  ※ 塾生は全アプリ無料でご利用いただけます。
-                </li>
+                <li>半年プラン：{yen(kampaInfo.standard.halfYear)}</li>
+                <li>年間プラン：{yen(kampaInfo.standard.year)}</li>
               </ul>
+            </div>
+            <div>
+              <h3 className="font-serif text-base font-semibold text-ai mb-2">
+                💎 プレミアムプラン
+              </h3>
+              <p className="text-xs text-sumi-soft mb-1.5">
+                AIを使った動的コンテンツ（添削・会話・生成問題など）が対象
+              </p>
+              <ul className="space-y-1 text-sumi-soft">
+                <li>月額プラン：{yen(kampaInfo.premium.month)}</li>
+                <li>年間プラン：{yen(kampaInfo.premium.year)}</li>
+              </ul>
+            </div>
+            <div className="sm:col-span-2 text-xs">
+              ※ 塾生は全アプリ無料でご利用いただけます。
             </div>
             <div>
               <h3 className="font-serif text-base font-semibold text-ai mb-2">
@@ -63,7 +79,7 @@ export default function KampaInfo() {
                 パスワード発行の流れ
               </h3>
               <ol className="list-decimal list-inside space-y-1 text-sumi-soft marker:text-matcha">
-                <li>塾ブログ経由でカンパ申し込みのご連絡をいただく</li>
+                <li>note経由でご購入のご連絡をいただく</li>
                 <li>ご入金確認後、各アプリのパスワードをまとめてお伝え</li>
                 <li>
                   パスワードは{kampaInfo.passwordRotationMonths}か月ごとに更新（次回継続時に再発行）

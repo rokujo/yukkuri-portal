@@ -24,6 +24,8 @@ export type AccessType =
   | "students_only"
   | "auth_required";
 
+export type PlanTier = "standard" | "premium";
+
 export type AppData = {
   id: string;
   name: string;
@@ -34,6 +36,7 @@ export type AppData = {
   url: string;
   status: AppStatus;
   access: AccessType;
+  planTier?: PlanTier; // access: "kampa" のアプリのみ意味を持つ
   icon: string;
   tags: string[];
   targetLevel: string[];
@@ -42,8 +45,8 @@ export type AppData = {
 };
 
 export type KampaInfo = {
-  halfYear: number;
-  year: number;
+  standard: { halfYear: number; year: number };
+  premium: { month: number; year: number };
   currency: string;
   paymentMethods: string[];
   studentsFree: boolean;

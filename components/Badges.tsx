@@ -29,18 +29,13 @@ const STATUS_BADGES: Record<
 };
 
 const ACCESS_BADGES: Record<
-  AppData["access"],
+  Exclude<AppData["access"], "kampa">,
   { label: string; emoji: string; className: string }
 > = {
   free: {
     label: "無料",
     emoji: "🆓",
     className: "bg-green-100 text-green-800 border border-green-200",
-  },
-  kampa: {
-    label: "カンパ制",
-    emoji: "🔐",
-    className: "bg-blue-100 text-ai border border-blue-200",
   },
   students_only: {
     label: "塾生限定",
@@ -51,6 +46,22 @@ const ACCESS_BADGES: Record<
     label: "要認証",
     emoji: "🔑",
     className: "bg-slate-100 text-slate-800 border border-slate-200",
+  },
+};
+
+const KAMPA_BADGES: Record<
+  "standard" | "premium",
+  { label: string; emoji: string; className: string }
+> = {
+  standard: {
+    label: "スタンダード",
+    emoji: "🔐",
+    className: "bg-blue-100 text-ai border border-blue-200",
+  },
+  premium: {
+    label: "プレミアム",
+    emoji: "💎",
+    className: "bg-indigo-100 text-indigo-800 border border-indigo-200",
   },
 };
 
@@ -65,8 +76,11 @@ export function StatusBadge({ status }: { status: AppData["status"] }) {
   );
 }
 
-export function AccessBadge({ access }: { access: AppData["access"] }) {
-  const conf = ACCESS_BADGES[access];
+export function AccessBadge({ app }: { app: AppData }) {
+  const conf =
+    app.access === "kampa"
+      ? KAMPA_BADGES[app.planTier ?? "standard"]
+      : ACCESS_BADGES[app.access];
   return (
     <span className={`badge ${conf.className}`}>
       <span aria-hidden>{conf.emoji}</span>

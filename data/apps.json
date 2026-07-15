@@ -42,15 +42,16 @@
       "name": "ゆっくり英単語2000",
       "subject": "english",
       "category": "grammar",
-      "description": "(Ankiアプリ）大学受験用単語集2000語を精選。英語はまずここから始める。無料開放中。",
+      "description": "(Ankiアプリ）大学受験用単語集2000語を精選。英語はまずここから始める。",
       "url": "https://anki-seven-black.vercel.app/",
       "status": "production",
-      "access": "free",
+      "access": "kampa",
+      "planTier": "standard",
       "icon": "🔤",
       "tags": ["英語", "単語", "Anki"],
       "targetLevel": ["高校"],
       "techStack": ["Anki"],
-      "lastUpdated": "2026-05-04"
+      "lastUpdated": "2026-07-15"
     },
     {
       "id": "english-yukkuri2000-reader",

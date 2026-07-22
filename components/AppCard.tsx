@@ -1,3 +1,6 @@
+"use client";
+
+import { track } from "@vercel/analytics";
 import type { AppData } from "@/lib/apps";
 import { isClickable } from "@/lib/apps";
 import { StatusBadge, AccessBadge, NewBadge } from "./Badges";
@@ -80,6 +83,14 @@ export default function AppCard({ app }: Props) {
         rel="noopener noreferrer"
         className={`${baseClass} hover:-translate-y-1 hover:shadow-soft-hover hover:border-ai/30 focus-visible:-translate-y-1 focus-visible:shadow-soft-hover`}
         aria-label={`${app.name} を開く（新しいタブ）`}
+        onClick={() =>
+          track("app_click", {
+            appId: app.id,
+            appName: app.name,
+            subject: app.subject,
+            access: app.access,
+          })
+        }
       >
         {cardInner}
       </a>

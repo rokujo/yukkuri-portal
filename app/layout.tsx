@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Serif_JP, Noto_Sans_JP } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { getSite } from "@/lib/apps";
 import InstallPrompt from "@/components/InstallPrompt";
@@ -66,6 +67,7 @@ export default function RootLayout({
       <body>
         {children}
         <InstallPrompt />
+        <Analytics />
       </body>
     </html>
   );
